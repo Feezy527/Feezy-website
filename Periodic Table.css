@@ -34,7 +34,7 @@ div.sidenav {
     align-items: center;
     height: 680px;
     z-index: 1;
-    position: sticky;
+    
 }
 
 div.element-symbol {
@@ -144,6 +144,7 @@ div.periodic-table {
     .element-container {
         width: 68vw;
         height: 855px;
+        position: sticky;
     }
 
     .close-btn {
@@ -167,3 +168,4 @@ div.periodic-table {
         padding: 5px;
         font-size: 12px;
     }
+
