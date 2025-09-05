@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Arial;
+    user-select: none;
+}
+
+div.container {
+    display: flex;
+    padding: 20px;
+    height: 100vh;
+}
+
+div.sidenav {
+    flex: 27%;
+    border: 1px solid black;
+    margin-right: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(42, 107, 192);
+}
+
+.element-container {
+    position: relative;
+    background-color: white;
+    border: 1px solid rgb(71, 64, 64);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 680px;
+}
+
+div.element-symbol {
+    position: absolute;
+    top: 30px;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    font-size: 3vw;
+}
+
+.ele {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    right: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+    padding: 15px;
+    font-size: 1.54vw;
+}
+
+div.element-info1 {
+    position: absolute;
+    top: 300px;
+    right: 10px;
+    left: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 1.3vw;
+    border: 1px solid #000;
+    text-align: left;
+    display: block;
+}
+
+.num {
+    padding: 10px 0px 10px 0px;
+}
+
+.close-btn {
+    display: none;
+}
+
+
+
+div.periodic-table {
+    flex: 70%;
+    border: 1px solid black;
+    padding: 10px 10px 0px 10px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 10px;
+}
+
+.symbol {
+    margin-bottom: 35px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4vw;
+    transition: 0.3s ease;
+}
+
+.symbol:hover {
+    background-color: black;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+
+
+@media (max-width: 850px) {
+
+    div.element-symbol {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .ele {
+        border: 1px solid black;
+        text-transform: uppercase;
+        margin-bottom: 100px;
+        padding: 15px;
+        font-size: 1.52vw;
+        top: 150px;
+    }
+
+
+    div.element-info1 {
+        padding: 2px;
+        top: 250px;
+
+    }
+
+    .num {
+        padding: 5px 0px 5px 0px;
+    }
+
+    .periodic-table {
+        grid-template-columns: repeat(14, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    .symbol {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+}
+
+/* phone size */
+@media (max-width: 600px) {
+
+    div.container {
+        position: relative;
+        overflow: scroll;
+        position: fixed;
+    }
+
+    /* sidenav */
+
+    div.sidenav {
+        display: none;
+        position: absolute;
+        width: 0px;
+        padding: 0px;
+        height: 0px;
+        transition: 0.5s;
+    }
+
+    .element-container {
+        width: 75vw;
+        height: 855px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        z-index: 1;
+    }
+
+    div.element-symbol {
+        font-size: 40px;
+    }
+
+    .ele {
+        font-size: 23px;
+    }
+
+    div.element-info1 {
+        font-size: 20px;
+    }
+
+    .close-btn {
+        font-size: 30px;
+        border-radius: 20px;
+        display: flex;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+
+    /* periodic table */
+
+    div.periodic-table {
+        padding: 10px 10px 0px 10px;
+        overflow: scroll;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+        grid-gap: 10px;
+    }
+
+    .symbol {
+        border-radius: 5px;
+        margin-bottom: 35px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px;
+        font-size: 15px;
+    }
+
+
+}
